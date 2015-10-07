@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
+import os
+import re
+import shutil
 import urllib
 import zipfile
-import shutil
-import re
-import os
+
 
 URL = 'http://www.pythonchallenge.com/pc/def/channel.zip'
 ZIPFILE = 'channel.zip'

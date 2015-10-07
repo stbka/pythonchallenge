@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
-from urllib import urlopen
-import time
 import re
+import time
+from urllib import urlopen
+
 
 URL="http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing="
 #NOTHING_NUM="12345"

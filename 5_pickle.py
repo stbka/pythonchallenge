@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-from urllib import urlopen
 import pickle
+from urllib import urlopen
 
 
 URL = 'http://www.pythonchallenge.com/pc/def/banner.p'

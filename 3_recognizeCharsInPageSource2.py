@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
-from urllib import urlopen
 import re
+from urllib import urlopen
+
 
 URL = "http://www.pythonchallenge.com/pc/def/equality.html"
 

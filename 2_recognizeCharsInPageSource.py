@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
-from urllib import urlopen
 from string import ascii_lowercase
+from urllib import urlopen
+
 
 URL = "http://www.pythonchallenge.com/pc/def/ocr.html"
 
