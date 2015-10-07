@@ -13,14 +13,18 @@ ZIPFILE = 'channel.zip'
 def solution_1(url):
 	# download
 	os.environ['http_proxy'] = 'http://proxy:8888'
-	print urllib.urlretrieve(url, ZIPFILE)
+	urllib.urlretrieve(url, ZIPFILE)
+	
+	# remove tmp dir
+	if os.path.exists("resources/lvl6"):
+		shutil.rmtree('resources/lvl6')
 	
 	# use tmp dir
 	os.mkdir("resources/lvl6", 0700)
-	shutil.move(ZIPFILE, 'resources/lvl6\%s' % ZIPFILE)
+	shutil.move(ZIPFILE, 'resources/lvl6/%s' % ZIPFILE)
 	
 	# extract
-	zf = zipfile.ZipFile("resources/lvl6\%s" % ZIPFILE, 'r')
+	zf = zipfile.ZipFile("resources/lvl6/%s" % ZIPFILE, 'r')
 	zf.extractall("resources/lvl6")
 	
 	# seearch for the answer
