@@ -5,12 +5,14 @@ import zipfile
 import shutil
 import re
 from os import remove, mkdir
+import os
 
-URL='http://www.pythonchallenge.com/pc/def/channel.zip'
-ZIPFILE='channel.zip'
+URL = 'http://www.pythonchallenge.com/pc/def/channel.zip'
+ZIPFILE = 'channel.zip'
 
 def solution_1(url):
 	# download
+	os.environ['http_proxy'] = 'http://proxy:8888'
 	print urllib.urlretrieve(url, ZIPFILE)
 	
 	# use tmp dir
@@ -35,6 +37,6 @@ def solution_1(url):
 	
 	# cleanup
 	zf.close()
-	#shutil.rmtree("tmp")
+	# shutil.rmtree("tmp")
 	
 solution_1(URL)
